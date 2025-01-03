@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Repeat Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .repeat, .no-repeat, .repeat-x, .repeat-y {
+            background-image: url('https://amymhaddad.s3.amazonaws.com/morocco-blue.png'); /* Replace with your image URL */
+            height: 200px; border: 1px solid #ccc; margin-bottom: 20px;
+        }
+        .repeat { background-repeat: repeat; }
+        .no-repeat { background-repeat: no-repeat; }
+        .repeat-x { background-repeat: repeat-x; }
+        .repeat-y { background-repeat: repeat-y; }
+    </style>
+</head>
+<body>
+    <h1>Background Repeat Example</h1>
+    <div class="repeat">repeat: Background repeats both horizontally and vertically.</div>
+    <div class="no-repeat">no-repeat: Background does not repeat.</div>
+    <div class="repeat-x">repeat-x: Background repeats horizontally.</div>
+    <div class="repeat-y">repeat-y: Background repeats vertically.</div>
+</body>
+</html>

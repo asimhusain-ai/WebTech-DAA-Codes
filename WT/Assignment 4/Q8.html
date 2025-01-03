@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Background Position</title>
+  <style>
+    body {font-family: Arial, sans-serif;display: flex;flex-direction: column;
+      align-items: center;gap: 20px;}
+      h1 {text-align: center;}
+    div {width: 200px;height: 200px;color: white;display: flex;
+      align-items: center;justify-content: center;font-weight: bold;
+      background-image: url('https://amymhaddad.s3.amazonaws.com/morocco-blue.png'); /* Replace with your image path */
+      background-size: cover;background-repeat: no-repeat;color: #fff;font-size: 1rem;
+      border-radius: 10px;}
+    .background-top-left {
+      background-position: top left;
+    }
+    .background-top-right {
+      background-position: top right;
+    }
+    .background-center {
+      background-position: center;
+    }
+    .background-bottom-left {
+      background-position: bottom left;
+    }
+    .background-bottom-right {
+      background-position: bottom right;
+    }
+  </style>
+</head>
+<body>
+  <h1>Background Position Example</h1>
+  <div class="background-top-left">Top Left</div>
+  <div class="background-top-right">Top Right</div>
+  <div class="background-center">Center</div>
+  <div class="background-bottom-left">Bottom Left</div>
+  <div class="background-bottom-right">Bottom Right</div>
+</body>
+</html>

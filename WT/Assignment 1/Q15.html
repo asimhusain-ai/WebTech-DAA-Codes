@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style> body {font-family: Arial, sans-serif;margin: 20px;}
+        form {max-width: 400px;margin: auto;padding: 10px;border: 1px solid #ccc;border-radius: 5px;}
+        label {display: block;margin-bottom: 5px;}
+        input[type="text"], input[type="email"], input[type="password"] {width: 96%;padding: 8px;
+            margin-bottom: 10px;border: 1px solid #ccc;border-radius: 4px;}
+        .submit-buttons {display: flex;justify-content: space-between;}
+        h1{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>User Registration Form</h1>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <div class="submit-buttons">
+            <button type="button" onclick="submitForm('GET')">Submit (GET)</button>
+            <button type="button" onclick="submitForm('POST')">Submit (POST)</button>
+        </div>
+    </form>
+    <script>
+        function submitForm(method) {
+            const form = document.getElementById('registrationForm');
+            const formData = new FormData(form);
+            const xhr = new XMLHttpRequest();
+            if (method === 'GET') {
+                const queryString = new URLSearchParams(formData).toString();
+                xhr.open('GET', 'submit_form.php?' + queryString, true);
+                xhr.send();
+            } else if (method === 'POST') {
+                xhr.open('POST', 'submit_form.php', true);
+                xhr.send(formData);
+            }
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert('Form submitted successfully using ' + method + ' method!');
+                }};}
+    </script> </body> </html>

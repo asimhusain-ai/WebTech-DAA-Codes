@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .intro {
+            font-size: 1.2em;
+            color: #555;
+        }
+        #highlight {
+            background-color: yellow;
+            padding: 5px;
+        }
+        a[target="_blank"] {
+            color: red;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p::first-line {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors Demonstration</h1>
+    <p class="intro">Various Selectors In CSS</p>
+    <p id="highlight">This paragraph is highlighted using an ID selector.</p>
+    <p>Here is a link that opens in a new tab: <a href="https://www.wikipedia.com" target="_blank">Asim Husain</a></p>
+    <p>This paragraph demonstrates the use of pseudo-elements. Only the first line of this paragraph will be bold.</p>
+</body>
+</html>
